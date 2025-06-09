@@ -6,14 +6,29 @@
 }
 
 body {
-    background-image: url('/bg.png');
+    background-image: url('./img/bg.png');
 }
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+    color: whitesmoke;
+}
+
+.top > * {
+    font-size: 2.5vw;
+}
+
 button {
     border-radius: 10px 10px;
     border-color: transparent;
     background-color: rgba(255, 255, 255, 0.2);
     color: rgb(240, 240, 240);
     cursor: pointer;
+    flex-direction: column;
 }
 
 button:hover {
@@ -29,15 +44,17 @@ button:active {
 div.main {
     display: absolute;
     position: absolute;
-    top: 5vh; left:1vw; right:1vw; bottom: 1vh;
+    top: 5vh; left:1vw;
     padding: 1vw 1vh;
     border-radius: 10px;
-    border-color: whitesmoke;
     width: 96vw;
-    height: 92vh;
-    background-color: rgba(0,0,0, 0.7);
+    height: 91vh;
+    background-color: rgba(0,0,0, 0.7);;
     opacity: 1;
     animation: body-appearance 0.5s forwards ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: whitesmoke;
 }
 
 div.main.primary {
@@ -53,9 +70,11 @@ div.main.primary {
     justify-content: center;
 }
 .profile > img {
-    height: 90%;
+    height: 80%;
     width: auto;
-    border-radius: 10px;
+    border-radius: 100%;
+    pointer-events: none;
+    user-select: none;
 }
 
 div.main.secondary {
@@ -63,20 +82,50 @@ div.main.secondary {
     display:none;
 }
 
-.top {
+.main-text {
+    white-space: pre-line;;
+}
+
+.projects {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    overflow-y: hidden;;
+    justify-content: space-around;
+    padding: 0.8rem;
+}
+.projects > button {
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    display:flex;
+    margin: 0.1rem 0;
+}
+
+.projects > button > img {
+    height: 80%;
+    width: auto;
+    border-radius: 10px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .hide {
     display: none;
 }
 
-div {
-    color: whitesmoke;
+#last-updated {
+    z-index: 0;
+    font-style: italic;
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: black;
+    display: block;
+    position: absolute;
+    bottom: 0; right: 1rem;
 }
 
 @keyframes hovering {
