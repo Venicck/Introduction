@@ -1,7 +1,57 @@
 <head>
+<meta charset="UTF-8">
+<title>Introduction of Venicck</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ベニックのホームページへようこそ。ここでは、ベニックの活動や最新情報を紹介します。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>ベニックのホームページ</h1>
-<h2>仮置きです。まだなーんもしてません。</h2>
-
+<div class="top">
+    <button class="profile-primary" onclick="ShowPrimary()">
+        ベニック
+    </button>
+    <div id="topbar-name">ベニック の ホームページ</div>
+    <button class="profile-secondary" onclick="ShowSecondary()">
+        ぽりとす
+    </button>
+</div>
+<div class="main primary" id="body-primary">
+    <div class="profile" style="background-color: rgb(58, 116, 137);">
+        <img src="./veni.png" style="border-radius: 100%;">
+        <div style="width: 10px;"></div>
+        <div class="vert", style="line-height: 25px;">
+            <div class="name">ベニック</div>
+            <div class="subname">Venicck</div>
+            <div class="sns">
+                <button onclick='GoTo("https://youtube.com/c/venicck");'>YouTube</button>
+                <button onclick='GoTo("https://x.com/R_Venicck");'>Twitter</button>
+                <button onclick='GoTo("https://github.com/Venicck");'>Github</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="main-text">
+        とある高校での「エレクトロニクス部」で活動していた人。<br>
+        小学生のいつかからパソコンを使い始めてかなりの年月を経ています。<br>
+        名前の由来は、わからん。
+    </div>
+</div>
+<div class="main secondary hide" id="body-secondary">
+    <div class="profile" style="background-color: rgb(21, 138, 62);">
+        <img src="./poly.png" style="border-radius: 100%;">
+        <div style="width: 10px;"></div>
+        <div class="vert", style="line-height: 25px;">
+            <div class="name">ぽりとす</div>
+            <div class="subname">Polythos</div>
+            <div class="sns">
+                <button onclick='GoTo("https://x.com/Polythos");'>Twitter</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
