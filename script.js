@@ -1,7 +1,6 @@
 site_project = 'https://api.github.com/repos/Venicck/Introduction';
 primarybody = document.getElementById('body-primary');
 secondarybody = document.getElementById('body-secondary');
-topname = document.getElementById('topbar-name');
 lastupdated = document.getElementById('last-updated');
 
 function ShowPrimary() {
@@ -40,7 +39,7 @@ window.onload = function() {
         data => data.json()
     ).then (
         json => {
-            lastupdated.textContent = 'Last Updated: ' + json.updated_at.split('T')[0];
+            lastupdated.textContent = '最終更新: ' + json.updated_at.split('T')[0];
         }
     );
 
